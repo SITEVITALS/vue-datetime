@@ -40,10 +40,8 @@
     "postpublish": "yon run demo:deploy"
   },
   "lint-staged": {
-    "*.{vue,js}": [
-    ],
-    "*.{vue,css}": [
-    ]
+    "*.{vue,js}": [],
+    "*.{vue,css}": []
   },
   "pre-commit": "lint:staged",
   "devDependencies": {
