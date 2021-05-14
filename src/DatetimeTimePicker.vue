@@ -67,7 +67,7 @@ export default {
       }))
     },
     minutes () {
-      return minutes(this.minuteStep).filter(minute => minute % 15 == 0).map(minute => ({
+      return minutes(this.minuteStep).map(minute => ({
         number: pad(minute),
         selected: minute === this.minute,
         disabled: timeComponentIsDisabled(this.minMinute, this.maxMinute, minute)
