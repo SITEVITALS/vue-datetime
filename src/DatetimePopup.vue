@@ -20,7 +20,7 @@
           :year="year"
           :month="month"></datetime-month-picker>
       <datetime-calendar
-          v-if="step === 'date'"
+          v-if="step === 'date' || step === 'time'"
           @change="onChangeDate"
           :year="year"
           :month="month"
@@ -30,7 +30,7 @@
           :week-start="weekStart"
       ></datetime-calendar>
       <datetime-time-picker
-          v-if="step === 'time'"
+          v-if="step === 'time' || step === 'date'"
           @change="onChangeTime"
           :hour="hour"
           :minute="minute"
