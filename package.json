@@ -41,11 +41,8 @@
   },
   "lint-staged": {
     "*.{vue,js}": [
-      "eslint --fix"
     ],
     "*.{vue,css}": [
-      "stylefmt",
-      "stylelint"
     ]
   },
   "pre-commit": "lint:staged",
