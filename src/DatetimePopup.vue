@@ -4,10 +4,10 @@
 
       <div class="vdatetime-popup__title" v-if="title">{{ title }}</div>
 
-      <div class="year-month-label">
+<!--       <div class="year-month-label">
         <span class="" @click="showMonth" v-if="type !== 'time'">{{ dateFormatted }}</span>, 
         <span class="" @click="showYear" v-if="type !== 'time'">{{ year }}</span>
-      </div>
+      </div> -->
 
       <!-- <div class="vdatetime-popup__year" @click="showYear" v-if="type !== 'time'">{{ year }}</div>
       <div class="vdatetime-popup__date" @click="showMonth" v-if="type !== 'time'">{{ dateFormatted }}</div> -->
@@ -28,7 +28,7 @@
           :year="year"
           :month="month"></datetime-month-picker>
       <datetime-calendar
-          v-if="step === 'date' || step === 'time'"
+          v-if="step === 'date'"
           @change="onChangeDate"
           :year="year"
           :month="month"
@@ -38,7 +38,7 @@
           :week-start="weekStart"
       ></datetime-calendar>
       <datetime-time-picker
-          v-if="step === 'time' || step === 'date'"
+          v-if="step === 'time'"
           @change="onChangeTime"
           :hour="hour"
           :minute="minute"
