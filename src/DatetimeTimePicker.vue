@@ -1,5 +1,9 @@
 <template>
+
   <div :class="{'vdatetime-time-picker': true, 'vdatetime-time-picker__with-suffix': use12Hour}">
+    
+    <div class="vdatetime-popup__title" v-if="title">{{ title }}</div>
+    
     <div class="vdatetime-time-picker__list vdatetime-time-picker__list--hours" ref="hourList">
       <div class="vdatetime-time-picker__item" v-for="hour in hours" @click="selectHour(hour)" :class="{'vdatetime-time-picker__item--selected': hour.selected, 'vdatetime-time-picker__item--disabled': hour.disabled}">{{ formatHour(hour.number) }}</div>
     </div>
@@ -18,6 +22,9 @@ import { hours, minutes, pad, timeComponentIsDisabled } from './util'
 
 export default {
   props: {
+    title: {
+      type: String,
+    },
     hour: {
       type: Number,
       required: true
